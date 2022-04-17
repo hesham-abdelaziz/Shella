@@ -1043,12 +1043,12 @@ background-color: #e5e5e5;
         background-image: url(/images/02-2.png);
     }
     .category-container .category .category-bg-two {
-        background-image: url(/images/03-1.jpg);
+        background-image: url(03-1.jpg);
 
 
     }
     .category-container .category .category-bg-three {
-        background-image: url(/images/04.jpg);
+        background-image: url(04.jpg);
 
     }
     .category-container .category:hover .category-bg-one,
