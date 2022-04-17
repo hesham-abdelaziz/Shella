@@ -695,7 +695,7 @@ background-color: #e5e5e5;
 .layouts .body .image-container .first-image .bg-image{
     width: 100%;
     height: 100%;
-    background-image: url(/images/prod-01.webp);
+    background-image: url(images/prod-01.webp);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -704,7 +704,7 @@ background-color: #e5e5e5;
 .layouts .body .image-container .second-image .bg-image{
     width: 100%;
     height: 100%;
-    background-image: url(/images/prod-02.webp);
+    background-image: url(images/prod-02.webp);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -847,7 +847,7 @@ background-color: #e5e5e5;
 .bg-section .bg-image{
     width: 100%;
     height: 100%;
-    background-image: url(/images/slaider.jpg);
+    background-image: url(images/slaider.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1040,15 +1040,15 @@ background-color: #e5e5e5;
 
    
     .category-container .category .category-bg-one {
-        background-image: url(/images/02-2.jpg);
+        background-image: url(images/02-2.jpg);
     }
     .category-container .category .category-bg-two {
-        background-image: url(/images/03-1.jpg);
+        background-image: url(images/03-1.jpg);
 
 
     }
     .category-container .category .category-bg-three {
-        background-image: url(/images/04.jpg);
+        background-image: url(images/04.jpg);
 
     }
     .category-container .category:hover .category-bg-one,
