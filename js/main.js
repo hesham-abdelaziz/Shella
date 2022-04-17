@@ -158,3 +158,17 @@ heartArray.forEach((heart) => {
 
 //#endregion
 // Like Button toggle
+
+
+
+let footer = document.querySelector('.footer');
+window.addEventListener('scroll' , () => {
+  if((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
+    console.log('you are at the bottom ');
+    footer.style.opacity = "1";
+  }
+  else {
+    footer.style.opacity = "0";
+
+  }
+})
