@@ -7,7 +7,9 @@
     font-family: 'Archivo', sans-serif;
 }
 body{
-    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
 }
 :root{
     --hover--color : #858585;
@@ -19,6 +21,7 @@ body{
     padding-right: 35px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 ul {
@@ -318,6 +321,7 @@ a{
 }
 .side-menu-container .body {
     height: 600px;
+    overflow: scroll;
 }
 
 .side-menu-container .body ul li {
@@ -560,7 +564,7 @@ a{
     visibility: hidden;
     transition: 0.3s linear;
     transition-delay: 0.1s;
-    overflow: hidden;
+    overflow: scroll;
     box-shadow: 0 4px 10px rgb(0 0 0 / 10%)
 } 
 .layouts .title{
@@ -1283,21 +1287,23 @@ background-color: #e5e5e5;
 
 
 /* Footer */
-
+.footer-container{
+    position: relative;
+}
 .footer{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     border: 1px solid #ccc;
-    height: 430px;
+    max-height: 430px;
     margin-bottom: 10px;
     z-index: -1;
     opacity: 0;
     border: none;
     border-top: 1px solid #ccc;
-    display: inline-block;
     width: 100%;
+    overflow: scroll;
 }
 
 .footer .head {
@@ -1306,6 +1312,13 @@ background-color: #e5e5e5;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width : 992px) {
+    .footer .head {
+        display: block;
+        text-align: center;
+    }
 }
 
 .footer .head .title{
@@ -1329,6 +1342,20 @@ background-color: #e5e5e5;
     margin-right: 8px;
 }
 
+@media (max-width :992px) {
+    .footer .head  .email-input  {
+        margin-top: 10px;
+    }
+    .footer .head input {
+        
+        width: 200px;
+        height: 15px;
+    }
+    .footer .head input::placeholder{
+        font-size: 12px;
+    }
+}
+
 .footer .head  .email-input input:focus{
     outline: none;
     border: 1px solid #141414;
@@ -1343,6 +1370,16 @@ background-color: #e5e5e5;
     transition: 0.3s;
     cursor: pointer;
 }
+@media (max-width : 992px) {
+    .footer .head  .email-input {
+        justify-content: center;
+    }
+    .footer .head  .email-input button {
+        height: 32px;
+        margin-top: 2px;
+        font-size: 12px;
+    } 
+}
 .footer .head  .email-input button:hover {
     background-color: #141414;
     color: #fff;
@@ -1353,6 +1390,12 @@ background-color: #e5e5e5;
     justify-content: space-around;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+}
+
+@media (max-width :992px) {
+    .footer .body {
+        display: none;
+    }
 }
 
 .footer .body .shop-list .head,
@@ -1430,11 +1473,24 @@ background-color: #e5e5e5;
     align-items: center;
     justify-content: space-between;
 }
+
 .footer .footer-bottom .logo p {
     margin-left: 8px;
     font-size: 10px;
     color: var(--hover--color);
     text-transform: capitalize;
+}
+@media (max-width : 992px) {
+    .footer .footer-bottom  {
+        flex-direction: column;
+    }
+    .footer .footer-bottom .logo {
+            flex-direction: column;
+    }
+    .footer .footer-bottom .logo p  {
+        margin : 10px 0;
+        text-align: center;
+    }
 }
 .footer .footer-bottom .icons{
     margin-right: 20px;
@@ -1456,6 +1512,58 @@ background-color: #e5e5e5;
     color: var(--hover--color);
 }
 
+.small-screen-body {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    scroll-behavior: auto;
+    height: auto;
+}
+@media (min-width : 992px) {
+    .small-screen-body {
+        display: none;
+    }
+}
+.small-screen-body ul li {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    text-transform: uppercase;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.small-screen-body .shop-list-sm ,
+.small-screen-body .information-list-sm 
+{
+    display: block;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+.small-screen-body .shop-list-sm.open,
+.small-screen-body .information-list-sm.open 
+{
+    height: 250px;
+    opacity: 1;
+    visibility: visible;
+}
+.small-screen-body .shop-list-sm ul , 
+.small-screen-body .information-list-sm ul 
+{
+    display: inline-block;
+}
+.small-screen-body .shop-list-sm ul li,
+.small-screen-body .information-list-sm ul li
+ {
+     width: 100%;
+    margin-top: 15px;
+    border: none;
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 0;
+    color: #858585;
+}
 
 
 /* Footer */

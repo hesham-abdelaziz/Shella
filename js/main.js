@@ -64,6 +64,7 @@ overlay.addEventListener("click", () => {
   searchModal.classList.remove("open");
   shoppingModal.classList.remove("open");
   sideMenuContainer.classList.remove("open");
+
 });
 
 ///////////////////////////
@@ -96,9 +97,17 @@ linksArray.forEach((link) => {
   link.addEventListener("click", (e) => {
     let arrow = link.firstElementChild;
     arrow.classList.toggle("open");
+
     if (link.lastElementChild) {
       let subMenu = link.lastElementChild;
       subMenu.classList.toggle("open");
+
+
+      overlay.addEventListener('click' , () =>{
+        subMenu.classList.remove("open");
+        arrow.classList.remove("open");
+
+      })
     } else {
       console.log("no las");
     }
@@ -171,4 +180,19 @@ window.addEventListener('scroll' , () => {
     footer.style.opacity = "0";
 
   }
+})
+
+
+
+
+let shop = document.querySelector('.shop-sm');
+let information = document.querySelector('.information');
+information.addEventListener('click' , () => {
+  footer.style.position
+  let informationList = document.querySelector('.information-list-sm');
+  informationList.classList.toggle('open')
+})
+shop.addEventListener('click' , () =>{
+  let shopList = document.querySelector('.shop-list-sm');
+  shopList.classList.toggle('open')
 })
