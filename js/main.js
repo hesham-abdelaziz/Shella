@@ -196,3 +196,90 @@ shop.addEventListener('click' , () =>{
   let shopList = document.querySelector('.shop-list-sm');
   shopList.classList.toggle('open')
 })
+
+
+
+
+
+// Trending Section carousel
+
+//#region 
+
+const wrapper = document.querySelector('.product-wrapper');
+// console.log(wrapper.clientWidth);
+const btns = document.querySelector('.btns')
+// console.log(dots);
+let clickCount =0;
+btns.addEventListener('click' , (e) => {
+  if(e.target.nodeName === "SPAN"){
+   Array.from(btns.children).forEach((btn) => {
+     btn.classList.remove('active');
+   });
+   if(e.target.classList.contains('first')){
+     wrapper.style.transform = "translateX(-0%)";
+     e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('second')){
+    wrapper.style.transform = "translateX(-100%)";
+    e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('third')){
+    wrapper.style.transform = "translateX(-200%)";
+    e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('fourth')){
+    wrapper.style.transform = "translateX(-300%)";
+    e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('fifth')){
+    wrapper.style.transform = "translateX(-400%)";
+    e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('sixth')){
+    wrapper.style.transform = "translateX(-505%)";
+    e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('seventh')){
+    wrapper.style.transform = "translateX(-605%)";
+    e.target.classList.add('active')
+   }
+   else if(e.target.classList.contains('eigth')){
+    wrapper.style.transform = "translateX(-705%)";
+    e.target.classList.add('active')
+   }
+  }
+})
+// let activeDot = 0;
+
+
+// btns.forEach((btn , id) => {
+//   btn.setAttribute('data-num' , id);
+//   btn.addEventListener('click' , (e) => {
+//     let clickedDot = e.target.dataset.num;
+
+//     if(clickedDot == activeDot){
+//       return;
+//     }
+//     else {
+//       let shift = (wrapper.parentElement.clientWidth) / 4;
+
+//       let pixels = -shift * clickedDot;
+
+//       wrapper.style.transform += 'translateX('+ pixels + 'px)';    
+      
+//       activeDot += clickedDot;
+
+//       let prev = document.querySelector('.btns span.prev')
+
+//       prev.addEventListener('click' , () =>{
+//           console.log('asdasd');
+//       let pixels = shift * clickedDot;
+
+//       wrapper.style.transform += 'translateX('+ pixels + 'px)';    
+
+//       })
+//     }
+//   })
+// })
+
+//#endregion
