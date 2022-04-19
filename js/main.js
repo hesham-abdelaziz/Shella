@@ -224,15 +224,15 @@ btns.addEventListener('click' , (e) => {
     e.target.classList.add('active')
    }
    else if(e.target.classList.contains('third')){
-    wrapper.style.transform = "translateX(-200%)";
+    wrapper.style.transform = "translateX(-205%)";
     e.target.classList.add('active')
    }
    else if(e.target.classList.contains('fourth')){
-    wrapper.style.transform = "translateX(-300%)";
+    wrapper.style.transform = "translateX(-305%)";
     e.target.classList.add('active')
    }
    else if(e.target.classList.contains('fifth')){
-    wrapper.style.transform = "translateX(-400%)";
+    wrapper.style.transform = "translateX(-405%)";
     e.target.classList.add('active')
    }
    else if(e.target.classList.contains('sixth')){

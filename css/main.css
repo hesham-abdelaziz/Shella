@@ -1342,7 +1342,7 @@ background-color: #e5e5e5;
         align-items: center;
     }
 
-    @media (min-width : 992px) {
+    @media (min-width : 768px) {
         .btns span.third ,
         .btns span.fourth ,
         .btns span.fifth ,
